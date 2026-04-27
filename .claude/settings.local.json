@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(java *)",
+      "Bash(npx *)",
+      "Bash(mvn *)",
+      "Bash(psql --version)",
+      "Bash(where spring *)",
+      "Read(//c/Users/kenwa/.sdkman/candidates/**)",
+      "Bash(git *)",
+      "Bash(unzip -q backend.zip)",
+      "Bash(./mvnw test *)",
+      "Bash(npm install *)",
+      "Bash(npm view *)",
+      "Bash(node *)",
+      "Bash(npm search *)",
+      "Bash(npm list *)"
+    ]
+  }
+}

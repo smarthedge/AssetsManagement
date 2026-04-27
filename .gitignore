@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Angular
+.angular/
+dist/
+
+# Spring Boot
+target/
+*.jar
+*.war
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings/
+.factorypath
+.springBeans
+.sts4-cache
+.nb-gradle/
+/nbproject/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+/frontend/
