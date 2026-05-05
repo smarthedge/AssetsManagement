@@ -12,6 +12,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.jwt.JwtClaimsSet;
 import org.springframework.security.oauth2.jwt.JwtEncoder;
@@ -65,6 +66,16 @@ public class JwtTokenService {
         String token = generateToken(authentication);
         log.info("User '{}' authenticated successfully, token generated", request.username());
 
+        return new LoginResponse(token, toUserResponse(user));
+    }
+
+    public LoginResponse generateTokenForUser(User user) {
+        log.info("Generating token for user: {}", user.getUsername());
+        var authorities = user.getRoles().stream()
+                .map(r -> new SimpleGrantedAuthority(r.getName()))
+                .collect(Collectors.toList());
+        var auth = new UsernamePasswordAuthenticationToken(user.getUsername(), null, authorities);
+        String token = generateToken(auth);
         return new LoginResponse(token, toUserResponse(user));
     }
 
