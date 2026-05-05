@@ -111,6 +111,7 @@ Concurrent update conflicts are handled automatically by `@Version` → 409.
 Manual SQL scripts in `backend/src/main/resources/db/migration/`. No Flyway configured. Apply to PostgreSQL before starting with a new schema version.
 
 - `V2__auth_features.sql` — makes `password_hash` nullable; adds `provider`, `provider_account_id`, `password_reset_token`, `password_reset_expires`; adds unique constraint and partial index
+- `V3__remove_user_id_audit_columns.sql` — drops `created_by_user_id` and `last_changed_by_user_id` from `users`, `roles`, `assets`
 
 ## Frontend structure
 
