@@ -49,7 +49,7 @@ class AuthControllerTest {
     private UserResponse buildUserResponse() {
         return new UserResponse(1L, "admin", "admin@test.com",
                 Set.of(new RoleResponse(1L, "ROLE_USER", "User", true, 0)),
-                true, null, "admin", LocalDateTime.now(), null, "admin", LocalDateTime.now(), 0);
+                true, "admin", LocalDateTime.now(), "admin", LocalDateTime.now(), 0);
     }
 
     private LoginResponse buildLoginResponse() {

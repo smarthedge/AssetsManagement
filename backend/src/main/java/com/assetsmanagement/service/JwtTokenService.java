@@ -108,8 +108,8 @@ public class JwtTokenService {
 
         return new UserResponse(
                 user.getId(), user.getUsername(), user.getEmail(), roles,
-                user.getStatus(), user.getCreatedByUserId(), user.getCreatedByUsername(),
-                user.getCreatedDateTime(), user.getLastChangedByUserId(), user.getLastChangedByUsername(),
+                user.getStatus(), user.getCreatedByUsername(),
+                user.getCreatedDateTime(), user.getLastChangedByUsername(),
                 user.getLastChangedDateTime(), user.getVersion());
     }
 }

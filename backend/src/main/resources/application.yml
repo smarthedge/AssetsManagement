@@ -55,7 +55,8 @@ springdoc:
 
 app:
   mail:
-    from: ${MAIL_USERNAME}
+#    from: ${MAIL_USERNAME}
+    from: kenwang.jian@gmail.com
     reset-password-base-url: http://localhost:4200/reset-password
   social:
     allowed-providers: google,github,facebook,microsoft

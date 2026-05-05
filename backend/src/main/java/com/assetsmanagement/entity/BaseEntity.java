@@ -25,17 +25,11 @@ public abstract class BaseEntity {
 
     private static final Logger log = LoggerFactory.getLogger(BaseEntity.class);
 
-    @Column(name = "created_by_user_id")
-    private Long createdByUserId;
-
     @Column(name = "created_by_username", length = 50)
     private String createdByUsername;
 
     @Column(name = "created_datetime", nullable = false, updatable = false)
     private LocalDateTime createdDateTime;
-
-    @Column(name = "last_changed_by_user_id")
-    private Long lastChangedByUserId;
 
     @Column(name = "last_changed_by_username", length = 50)
     private String lastChangedByUsername;

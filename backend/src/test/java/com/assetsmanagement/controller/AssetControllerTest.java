@@ -48,7 +48,7 @@ class AssetControllerTest {
     void getAssets_shouldReturnPaginatedResults() throws Exception {
         AssetResponse asset = new AssetResponse(1L, "Laptop", "A laptop", "IT",
                 "SN-001", LocalDate.now(), new BigDecimal("1500.00"),
-                true, 1L, "admin", LocalDateTime.now(), 1L, "admin", LocalDateTime.now(), 0);
+                true, "admin", LocalDateTime.now(), "admin", LocalDateTime.now(), 0);
         PageResponse<AssetResponse> page = new PageResponse<>(List.of(asset), 0, 20, 1, 1);
 
         when(assetService.getAllAssets(anyInt(), anyInt(), isNull())).thenReturn(page);
@@ -65,7 +65,7 @@ class AssetControllerTest {
     void createAsset_shouldReturnCreated() throws Exception {
         AssetResponse asset = new AssetResponse(1L, "New Asset", "Desc", "IT",
                 "SN-002", LocalDate.now(), new BigDecimal("999.99"),
-                true, 1L, "admin", LocalDateTime.now(), 1L, "admin", LocalDateTime.now(), 0);
+                true, "admin", LocalDateTime.now(), "admin", LocalDateTime.now(), 0);
 
         when(assetService.createAsset(any())).thenReturn(asset);
 
