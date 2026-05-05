@@ -15,6 +15,26 @@ spring:
     init:
       mode: never
 
+  mail:
+    host: localhost
+    port: 25
+    username: test@test.com
+    password: test
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
+            required: false
+
+app:
+  mail:
+    from: test@test.com
+    reset-password-base-url: http://localhost:4200/reset-password
+  social:
+    allowed-providers: google,github,facebook,microsoft
+
 logging:
   level:
     com.assetsmanagement: ERROR

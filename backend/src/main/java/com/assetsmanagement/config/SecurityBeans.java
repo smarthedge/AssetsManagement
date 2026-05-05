@@ -44,11 +44,14 @@ public class SecurityBeans {
 
             log.debug("User '{}' loaded with authorities: {}", username, authorities);
 
+            boolean hasPassword = user.getPasswordHash() != null;
             return new org.springframework.security.core.userdetails.User(
                     user.getUsername(),
-                    user.getPasswordHash(),
+                    hasPassword ? user.getPasswordHash() : "",
                     user.getStatus(),
-                    true, true, true,
+                    true,
+                    hasPassword,
+                    true,
                     authorities
             );
         };
