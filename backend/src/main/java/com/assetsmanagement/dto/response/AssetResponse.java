@@ -13,10 +13,8 @@ public record AssetResponse(
         LocalDate purchaseDate,
         BigDecimal value,
         Boolean status,
-        Long createdByUserId,
         String createdByUsername,
         LocalDateTime createdDateTime,
-        Long lastChangedByUserId,
         String lastChangedByUsername,
         LocalDateTime lastChangedDateTime,
         Integer version

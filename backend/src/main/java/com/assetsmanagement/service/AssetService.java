@@ -143,8 +143,8 @@ public class AssetService {
         return new AssetResponse(
                 asset.getId(), asset.getName(), asset.getDescription(), asset.getCategory(),
                 asset.getSerialNumber(), asset.getPurchaseDate(), asset.getValue(),
-                asset.getStatus(), asset.getCreatedByUserId(), asset.getCreatedByUsername(),
-                asset.getCreatedDateTime(), asset.getLastChangedByUserId(), asset.getLastChangedByUsername(),
+                asset.getStatus(), asset.getCreatedByUsername(),
+                asset.getCreatedDateTime(), asset.getLastChangedByUsername(),
                 asset.getLastChangedDateTime(), asset.getVersion());
     }
 }

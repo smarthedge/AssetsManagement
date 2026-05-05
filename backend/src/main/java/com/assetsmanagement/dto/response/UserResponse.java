@@ -9,10 +9,8 @@ public record UserResponse(
         String email,
         Set<RoleResponse> roles,
         Boolean status,
-        Long createdByUserId,
         String createdByUsername,
         LocalDateTime createdDateTime,
-        Long lastChangedByUserId,
         String lastChangedByUsername,
         LocalDateTime lastChangedDateTime,
         Integer version
